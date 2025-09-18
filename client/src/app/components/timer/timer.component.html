@@ -16,7 +16,7 @@
 
         <button class="btn secondary" (click)="toggle()">
             <span class="material-icons">
-                {{ isPlaying ? 'pause' : 'play_arrow' }}
+                {{ counter.getVelocity() ? 'pause' : 'play_arrow' }}
             </span>
         </button>
     </div>

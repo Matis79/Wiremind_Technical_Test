@@ -28,6 +28,9 @@ export class CounterService {
     getCounterValue(): string {
         return this._counter().toFixed(2);
     }
+    isCounterZero(): boolean {
+        return this.getCounterValue() === '0.00';
+    }
     getVelocity(): number {
         return this._velocity();
     }
@@ -41,6 +44,7 @@ export class CounterService {
     resetCounter() {
         this._counter.set(0);
         this._snapshots.set([]);
+        this._velocity.set(0);
         this._goal = parseFloat((Math.random() * 100).toFixed(2));
     }
 

@@ -16,6 +16,9 @@ export class TimerComponent {
     isPlaying = false;
 
     toggle() {
+        if (this.counter.isCounterZero()) {
+            this.isPlaying = false;
+        }
         this.isPlaying = !this.isPlaying;
         this.counter.setVelocity(this.isPlaying ? 1 : 0);
     }

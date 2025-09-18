@@ -1,0 +1,35 @@
+.table-wrap {
+    overflow: auto;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 8px 8px 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    color: #e7e7f7;
+}
+thead th {
+    text-align: left;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+tbody td {
+    padding: 8px 12px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.empty {
+    padding: 16px;
+    color: rgba(255, 255, 255, 0.75);
+    font-style: italic;
+}
+
+table tbody td:nth-child(3) {
+    opacity: 0.55;
+}

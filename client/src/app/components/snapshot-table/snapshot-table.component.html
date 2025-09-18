@@ -1,0 +1,24 @@
+@if (snapshots.length > 0) {
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Datetime</th>
+                <th>Counter</th>
+                <th>Velocity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (s of displayed; track $index) {
+            <tr>
+                <td>{{ s.date | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+                <td>{{ s.counter | number: '1.2-2' }}</td>
+                <td>{{ s.velocity | number: '1.0-0' }}/s</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+} @else {
+<div class="empty">No snapshots yet — hit the button to capture the moment.</div>
+}

@@ -1,0 +1,16 @@
+<div class="velocity-header">Velocity</div>
+<div class="center">
+    <div class="label">Velocity</div>
+    <div class="value">{{ value }}</div>
+    <div class="unit">/s</div>
+</div>
+
+<div class="controls condensed">
+    <div class="row">
+        <button class="btn" (click)="counter.incVelocity(-1)">−1</button>
+        <label for="vel-input">Velocity (/s)</label>
+        <input id="vel-input" type="number" [ngModel]="counter.getVelocity()" (ngModelChange)="counter.setVelocity(+$event)" />
+
+        <button class="btn" (click)="counter.incVelocity(1)">+1</button>
+    </div>
+</div>

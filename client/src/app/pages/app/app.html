@@ -1,0 +1,26 @@
+<div class="page">
+    <header>
+        <h1>Counter</h1>
+        <div class="subtitle">Try to get as close as possible to the Target Time</div>
+    </header>
+
+    <main>
+        <section class="panel">
+            <div class="panel-left">
+                <app-timer class="slot-timer" [counter]="counter"></app-timer>
+
+                <div class="glass soft slot-leaderboard">
+                    <app-leaderboard [snapshots]="counter.getSnapshots()" [goal]="counter.getGoal()"> </app-leaderboard>
+                </div>
+            </div>
+
+            <div class="panel-right">
+                <div class="glass soft slot-velocity">
+                    <app-velocity [value]="velocity" [counter]="counter"></app-velocity>
+                </div>
+
+                <app-snapshot-table class="slot-snapshot" [snapshots]="counter.getSnapshots()"> </app-snapshot-table>
+            </div>
+        </section>
+    </main>
+</div>

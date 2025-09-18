@@ -1,0 +1,93 @@
+@use '../../../styles' as *;
+
+:host {
+    color: #e9e9ee;
+    font-family:
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Helvetica,
+        Arial,
+        Apple Color Emoji,
+        Segoe UI Emoji;
+}
+
+.page {
+    min-height: 100vh;
+    display: block;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: radial-gradient(120% 120% at 20% 0%, #141420 0%, #0b0b14 60%, #0a0a12 100%);
+}
+
+.backdrop {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.25;
+}
+
+header {
+    padding: 36px 28px 8px;
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+}
+header .subtitle {
+    opacity: 0.75;
+    margin-top: 6px;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 12px 28px 40px;
+}
+
+.panel {
+    display: grid;
+    gap: 28px;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+}
+.panel-left,
+.panel-right {
+    display: grid;
+    gap: 18px;
+}
+
+.soft {
+    padding: 16px;
+}
+
+@media (max-width: 920px) {
+    .panel {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 18px;
+    }
+
+    .panel-left,
+    .panel-right {
+        display: contents;
+    }
+
+    .slot-timer {
+        grid-row: 1;
+    }
+    .slot-velocity {
+        grid-row: 2;
+    }
+    .slot-leaderboard {
+        grid-row: 3;
+    }
+    .slot-snapshot {
+        grid-row: 4;
+    }
+}

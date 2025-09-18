@@ -1,0 +1,23 @@
+<div class="counter-hero glass">
+    <div class="label">Current counter</div>
+    <div class="value">{{ counter.getCounterValue() }}</div>
+    <div class="meta">
+        Velocity: <span class="velocity">{{ counter.getVelocity() }}</span
+        >/s
+    </div>
+
+    <div class="goal">
+        🎯 Target Time : <strong>{{ counter.getGoal() | number: '1.2-2' }}</strong>
+    </div>
+
+    <div class="actions">
+        <button class="btn primary" (click)="counter.resetCounter()">Reset counter</button>
+        <button class="btn accent" (click)="counter.takeSnapshot()">📸 Snapshot</button>
+
+        <button class="btn secondary" (click)="toggle()">
+            <span class="material-icons">
+                {{ isPlaying ? 'pause' : 'play_arrow' }}
+            </span>
+        </button>
+    </div>
+</div>

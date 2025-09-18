@@ -1,0 +1,72 @@
+@use '@angular/material' as mat;
+@include mat.core();
+@import './app/styles/variables.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: $base-font;
+    background-color: $background;
+    color: $text;
+}
+
+button {
+    padding: 1em 1.5em;
+    text-align: center;
+    font-weight: 500;
+    margin: 10px;
+    font-size: 1em;
+    font-family: $base-font;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.btn.primary {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.btn.secondary {
+    background: rgba(34, 197, 94, 0.18); 
+    border-color: rgba(34, 197, 94, 0.38); 
+    color: #fff; 
+    transition:
+        background 0.2s,
+        border 0.2s;
+}
+
+.btn.secondary:active,
+.btn.secondary:hover {
+    background: rgba(34, 197, 94, 0.32); 
+    border-color: rgba(34, 197, 94, 0.55);
+}
+
+.btn.accent {
+    background: rgba(20, 184, 166, 0.15);
+    border-color: rgba(20, 184, 166, 0.28);
+}
+
+.glass {
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(6px);
+}

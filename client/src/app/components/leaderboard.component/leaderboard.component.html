@@ -1,0 +1,16 @@
+<div class="leaderboard">
+    <div class="header">Leaderboard (top 5)</div>
+
+    @if (leaderBoard.length > 0) {
+    <ol>
+        @for (score of leaderBoard; track $index) {
+        <li>
+            {{ score.diff | number: '1.2-2' }}
+            <small>({{ score.date | date: 'HH:mm:ss' }})</small>
+        </li>
+        }
+    </ol>
+    } @else {
+    <div class="muted">No attempts yet.</div>
+    }
+</div>
